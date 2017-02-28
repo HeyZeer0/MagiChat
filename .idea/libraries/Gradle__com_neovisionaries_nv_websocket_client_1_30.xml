@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.neovisionaries:nv-websocket-client:1.30">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/neovisionaries/nv-websocket-client/1.30/nv-websocket-client-1.30.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

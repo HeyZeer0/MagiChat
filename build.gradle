@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '1.2.4'
+    id 'org.spongepowered.plugin' version '0.8.1'
+}
+
+group = 'net.heyzeer0'
+version = '3.0'
+description = "Chat + Discord"
+mainClassName = 'net.heyzeer0.mgchat.MagiChat'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(AbstractCompile) {
+    classpath += configurations.shadow
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+
+dependencies {
+    compile 'org.spongepowered:spongeapi:5.1.0'
+    compile group: 'com.mashape.unirest', name: 'unirest-java', version:'1.4.9'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version:'3.5'
+    compile group: 'net.dv8tion', name: 'JDA', version:'3.0.BETA2_128'
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+}
+
+shadowJar {
+    relocate 'org.apache', 'shaded.apache'
+    dependencies {
+        exclude(dependency('org.spongepowered:spongeapi:5.0.0'))
+    }
+    baseName = 'MagiChat'
+    version = 3.0
+}
+
+task "createProject" << {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}
