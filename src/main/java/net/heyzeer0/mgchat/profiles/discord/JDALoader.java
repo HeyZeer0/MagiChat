@@ -60,23 +60,12 @@ public class JDALoader {
                     .setAudioEnabled(false)
                     .buildBlocking();
 
-            TextChannel staff = jda.getTextChannelById(ConfigValues.STAFF_CHANNEL_ID);
-
             if(!ConfigValues.WEBHOOK_URL.equalsIgnoreCase("") && !ConfigValues.WEBHOOK_URL.equalsIgnoreCase("<optional>")) {
                 useWebhook = true;
-
                 Main.getPlugin().getLogger().info("Use of Webhook has been enabled.");
-
-                if(staff == null) {
-                    return JDAConnection.INVALID_CHANNEL;
-                }
-
-                loaded = true;
-
-                updateTopic();
-                return JDAConnection.SUCCESSFUL;
             }
 
+            TextChannel staff = jda.getTextChannelById(ConfigValues.STAFF_CHANNEL_ID);
             TextChannel global = jda.getTextChannelById(ConfigValues.GLOBAL_CHANNEL_ID);
 
             if(global == null || staff == null) {
