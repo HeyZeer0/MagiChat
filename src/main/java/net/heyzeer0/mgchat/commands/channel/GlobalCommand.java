@@ -1,12 +1,8 @@
 package net.heyzeer0.mgchat.commands.channel;
 
-import com.sun.javafx.binding.StringFormatter;
 import net.heyzeer0.mgchat.Main;
-import net.heyzeer0.mgchat.commands.ChannelCommand;
 import net.heyzeer0.mgchat.config.ConfigValues;
 import net.heyzeer0.mgchat.managers.UserManager;
-import net.heyzeer0.mgchat.profiles.MagiMessageChannel;
-import net.heyzeer0.mgchat.profiles.UserProfile;
 import net.heyzeer0.mgchat.utils.Utils;
 import org.apache.commons.lang3.StringUtils;
 import org.spongepowered.api.Sponge;

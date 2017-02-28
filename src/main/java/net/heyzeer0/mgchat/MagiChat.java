@@ -1,9 +1,7 @@
 package net.heyzeer0.mgchat;
 
 import com.google.inject.Inject;
-import net.heyzeer0.mgchat.listeners.PlayerListeners;
 import org.slf4j.Logger;
-import org.spongepowered.api.Sponge;
 import org.spongepowered.api.config.ConfigDir;
 import org.spongepowered.api.event.Listener;
 import org.spongepowered.api.event.game.state.GameStartedServerEvent;
