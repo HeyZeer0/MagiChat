@@ -68,7 +68,7 @@ public class MessageListeners extends ListenerAdapter {
             }
 
             Sponge.getServer().setBroadcastChannel(MessageChannel.TO_ALL);
-            Sponge.getServer().getBroadcastChannel().send(Utils.deserializeText(String.format(ConfigValues.DISCORD_TO_SERVER_GLOBAL, e.getMember().getEffectiveName(), message)));
+            Sponge.getServer().getBroadcastChannel().send(Utils.deserializeText(String.format(ConfigValues.DISCORD_TO_SERVER_GLOBAL, e.getMember().getRoles().get(0).getName(), e.getMember().getEffectiveName(), message)));
 
             return;
         }

@@ -121,7 +121,7 @@ public class JDALoader {
                     nameValuePairs.add(new BasicNameValuePair("avatar_url", "https://crafatar.com/avatars/" + nick + "?default=MHF_Alex"));
                     UrlEncodedFormEntity urlEncodedFormEntity = new UrlEncodedFormEntity(nameValuePairs, "utf-8");
                     post.setEntity(urlEncodedFormEntity);
-                    HttpResponse response = httpClient.execute(post);
+                    httpClient.execute(post);
                 } catch (IOException e) {}
             });
 
