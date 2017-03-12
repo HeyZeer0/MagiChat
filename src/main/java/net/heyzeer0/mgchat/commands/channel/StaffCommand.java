@@ -56,11 +56,11 @@ public class StaffCommand implements CommandExecutor {
             }
         }
 
+        channel.clearMembers();
+
         channel.send(Utils.deserializeText(String.format(ConfigValues.STAFF_HEADER, p.getName()) + String.format(ConfigValues.STAFF_BODY, message)));
 
         Main.discord.sendStaffMessage(p.getName(), message);
-
-        channel.clearMembers();
 
         return CommandResult.success();
     }
