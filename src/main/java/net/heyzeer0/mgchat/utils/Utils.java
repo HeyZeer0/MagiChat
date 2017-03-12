@@ -5,6 +5,7 @@ import net.heyzeer0.mgchat.profiles.discord.JDALoader;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.serializer.TextSerializers;
 
+import java.awt.*;
 import java.util.regex.Matcher;
 
 /**
@@ -52,6 +53,41 @@ public class Utils {
         }
 
         return back;
+    }
+
+    public static String convertColor(Color r) {
+        if(r == null) {
+            return "&f";
+        }
+        String hex = Integer.toHexString(r.getRGB());
+        switch (hex) {
+            case "ffe74c3c":
+                return "&c";
+            case "ff2ecc71":
+                return "&a";
+            case "ff1f8b4c":
+                return "&2";
+            case "fff1c40f":
+                return "&e";
+            case "ffe67e22":
+                return "&6";
+            case "ff3498db":
+                return "&b";
+            case "ff206694":
+                return "&1";
+            case "ffe91e63":
+                return "&d";
+            case "ff71368":
+                return "&5";
+            case "fffffff":
+                return "&f";
+            case "ff95a5a6":
+                return "&7";
+            case "ff607d8b":
+                return "&8";
+            default:
+                return "";
+        }
     }
 
 }

@@ -29,7 +29,7 @@ public class ConfigValues {
     public static String DISCORD_PLAYERS_MESSAGE_NOPLAYERS = "Nenhum jogador online.";
 
     //Discord Chat Prefixes
-    public static String DISCORD_TO_SERVER_GLOBAL = "&7[&a&lG&7] &7[&bDiscord&7] %s &f%s&7: &7%s";
+    public static String DISCORD_TO_SERVER_GLOBAL = "&7[&a&lG&7] &7[&bDiscord&7] &f%s&7: &7%s";
     public static String DISCORD_TO_SERVER_STAFF = "&7[&c&lS&7] &7[&bDiscord&7] &f%s&7: &7%s";
     public static String SERVER_TO_DISCORD = "**%s:** %s";
 

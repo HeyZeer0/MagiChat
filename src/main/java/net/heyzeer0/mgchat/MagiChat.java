@@ -15,7 +15,7 @@ import java.io.File;
  * Copyright © HeyZeer0 - 2016 ~ 2017
  */
 
-@Plugin(name = "MagiChat", id = "mgchat", version = "3.0.0", authors = {"HeyZeer0"})
+@Plugin(name = "MagiChat", id = "mgchat", version = "3.0.0", authors = {"HeyZeer0"}, description = "A chat plugin + discord.")
 public class MagiChat {
 
     //interface

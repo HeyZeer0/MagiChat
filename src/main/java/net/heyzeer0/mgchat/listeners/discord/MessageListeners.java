@@ -30,6 +30,10 @@ public class MessageListeners extends ListenerAdapter {
             return;
         }
 
+        if(!Main.discord.isLoaded()) {
+            return;
+        }
+
         String message = e.getMessage().getContent();
 
         if(message == null || message.equalsIgnoreCase("") || message.equalsIgnoreCase(" ")) {
@@ -68,7 +72,13 @@ public class MessageListeners extends ListenerAdapter {
             }
 
             Sponge.getServer().setBroadcastChannel(MessageChannel.TO_ALL);
-            Sponge.getServer().getBroadcastChannel().send(Utils.deserializeText(String.format(ConfigValues.DISCORD_TO_SERVER_GLOBAL, e.getMember().getRoles().get(0).getName(), e.getMember().getEffectiveName(), message)));
+
+            String name = e.getMember().getEffectiveName();
+            if(e.getMember().getRoles().size() >= 1) {
+                name = Utils.convertColor(e.getMember().getRoles().get(0).getColor()) + e.getMember().getRoles().get(0).getName() + e.getMember().getEffectiveName();
+            }
+
+            Sponge.getServer().getBroadcastChannel().send(Utils.deserializeText(String.format(ConfigValues.DISCORD_TO_SERVER_GLOBAL, name, message)));
 
             return;
         }
@@ -95,6 +105,7 @@ public class MessageListeners extends ListenerAdapter {
                     }
                 }
             }
+            e.getGuild().getMemberById("").getRoles().get(0);
             channel.clearMembers();
 
             channel.send(Utils.deserializeText(String.format(ConfigValues.DISCORD_TO_SERVER_STAFF, e.getMember().getEffectiveName(), message)));
