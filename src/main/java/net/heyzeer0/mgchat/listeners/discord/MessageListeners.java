@@ -75,7 +75,7 @@ public class MessageListeners extends ListenerAdapter {
 
             String name = e.getMember().getEffectiveName();
             if(e.getMember().getRoles().size() >= 1) {
-                name = Utils.convertColor(e.getMember().getRoles().get(0).getColor()) + e.getMember().getRoles().get(0).getName() + e.getMember().getEffectiveName();
+                name = Utils.convertColor(e.getMember().getRoles().get(0).getColor()) + "&l" + e.getMember().getRoles().get(0).getName() + " " + Utils.convertColor(e.getMember().getRoles().get(0).getColor()) + e.getMember().getEffectiveName();
             }
 
             Sponge.getServer().getBroadcastChannel().send(Utils.deserializeText(String.format(ConfigValues.DISCORD_TO_SERVER_GLOBAL, name, message)));

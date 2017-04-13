@@ -14,8 +14,8 @@ import java.util.List;
 public class ConfigManager {
 
     public static ConfigProfile main_config = new ConfigProfile("config", null);
-    public static ConfigProfile message_config = new ConfigProfile("messages", null);;
-    public static ConfigProfile command_config = new ConfigProfile("commands", null);;
+    public static ConfigProfile message_config = new ConfigProfile("messages", null);
+    public static ConfigProfile command_config = new ConfigProfile("commands", null);
 
     public static List<ConfigResult> loadConfig() {
         ConfigResult main_result = main_config.loadConfig();

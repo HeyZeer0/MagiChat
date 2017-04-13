@@ -61,7 +61,9 @@ public class Main {
 
     public static void onDisable() {
         if(discord.isLoaded()) {
-            discord.getGlobal().sendMessage(ConfigValues.SERVER_STOP).queue();
+            discord.getGlobal().sendMessage(ConfigValues.SERVER_STOP).queue(sucess ->
+                discord.getJda().shutdown()
+            );
         }
         Sponge.getEventManager().unregisterPluginListeners(MagiChat.getInstance());
     }
