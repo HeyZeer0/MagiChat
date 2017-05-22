@@ -148,5 +148,4 @@ public class DiscordCommandSender implements ConsoleSource {
         Main.discord.getJda().getTextChannelById(channel).sendMessage(String.format(ConfigValues.DISCORD_EXECUTE_MESSAGE, StringUtils.join(msgs, "\n"))).queue();
     }
 
-
 }
