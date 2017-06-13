@@ -21,3 +21,4 @@
   <li><a href="https://discord.gg/0uUBwnaYnXmFoa56">Discord</a></li>
 </ul>
 </html>
+© 2016-2017 HEYZEER0.CF ALL RIGHTS RESERVED
