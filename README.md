@@ -19,6 +19,6 @@
   <li><a href="http://magitechserver.com/">Website</a></li>
   <li><a href="http://forum.magitechserver.com/">Forum</a></li>
   <li><a href="https://discord.gg/0uUBwnaYnXmFoa56">Discord</a></li>
+  <p>© 2016-2017 HEYZEER0.CF ALL RIGHTS RESERVED</p>
 </ul>
 </html>
-© 2016-2017 HEYZEER0.CF ALL RIGHTS RESERVED
