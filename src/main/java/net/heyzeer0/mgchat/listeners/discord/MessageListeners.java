@@ -105,7 +105,6 @@ public class MessageListeners extends ListenerAdapter {
                     }
                 }
             }
-            e.getGuild().getMemberById("").getRoles().get(0);
             channel.clearMembers();
 
             channel.send(Utils.deserializeText(String.format(ConfigValues.DISCORD_TO_SERVER_STAFF, e.getMember().getEffectiveName(), message)));
