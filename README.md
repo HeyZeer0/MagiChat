@@ -2,7 +2,7 @@
 <html>
 <img src="http://api.heyzeer0.cf/jenkins/magichat/logo.png" alt="Logo">
 <h3>MagiChat</h3>
-<p>A Simple chat formmater with channels who can integrate discord.</p>
+<p>A Simple chat formatter with channels who can integrate discord.</p>
 
 <h3>Download</h3>
 <ul>
